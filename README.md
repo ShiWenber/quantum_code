@@ -1,5 +1,28 @@
 # quantum_code
 
+- [x] abstract
+- [ ] 写introduction
+- [ ] 汇报related work
+
+## 汇报 related work
+
+QAOA for solving Max-Cut 部分当作related work 讲 
+
+1. 介绍经典计算机上的 maxcut | QAOA for solving Max-Cut 对比 xst
+2. Initialisation techniques for QAOA. mxy
+
+## Introduction
+
+写 Introduction kyw
+
+## 实验演示
+
+加入华为mindquantum的实验内容 swb
+
+## 做PPT
+
+wyx
+
 ## 环境
 
 青果语言：[Quingo-runtime: Quingo编程框架的运行时系统，可提供使用Quingo进行量子-经典异构编程的能力。 该编程框架组织、管理系统可用的量子-经典计算资源。量子计算物理系统或量子模拟器可通过继承相关类接入此框架中。 (gitee.com)](https://gitee.com/quingo/quingo-runtime)
@@ -232,7 +255,11 @@ Quantumn Graph Neural Networks based Graph Representation
 
 1. 背景：GAT（Graph Attention Network）是一种用于处理图结构数据的神经网络模型。与传统的图神经网络模型不同，GAT采用了注意力机制来对节点进行加权聚合，从而更好地捕捉节点之间的关系。
 2. 当前领域痛点或者需要解决的问题：然而，GAT在获得更好的特征提取效果的同时，注意力机制导致了训练速度慢的问题
-3. 我们提出的解决方法：本文利用
+3. 我们提出的解决方法：本文利用量子的并行计算指数加速特性来搭建神经网络
+4. 我们的实验方法：本文搭建了基于量子计算的图神经网络编码器，使用较复杂的网络提取出了较好的特征，同时模型的训练速度大幅增加
+5. 我们将经典计算机上的神经网络转化为量子计算机上的神经网络的方法不仅适用于图神经网络，还能适用于各种类型的神经网络，经典的机器学习方法往往大量采用并行，而本文展示了，这种并行可以方便的转化到量子计算上从而减少算力负担。
+
+The GAT (Graph Attention Network) is a neural network model used for processing graph-structured data. Unlike traditional graph neural network models, GAT employs attention mechanisms to perform weighted aggregation of nodes, thus better capturing the relationships between nodes. However, the attention mechanism in GAT results in slow training speed, even though it improves feature extraction. In this paper, we leverage the exponential acceleration property of quantum parallel computing to construct a graph neural network and convert the parallel matrix encoding of CUDA into quantum parallel encoding. We build a quantum-based graph neural network encoder and use a more complex network to extract better features, while significantly increasing the training speed of the model. Classical machine learning methods often rely heavily on parallel computing, and this paper demonstrates that such parallelism can be easily converted to quantum computing, reducing the computational burden. The method of transforming neural networks from classical computers to quantum computers presented in this paper is not only applicable to graph neural networks but also to various other types of machine learning tasks.
 
 ## Introduction 汇报
 
