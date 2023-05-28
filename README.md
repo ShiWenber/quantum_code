@@ -234,6 +234,68 @@ Quantumn Graph Neural Networks based Graph Representation
 2. 当前领域痛点或者需要解决的问题：然而，GAT在获得更好的特征提取效果的同时，注意力机制导致了训练速度慢的问题
 3. 我们提出的解决方法：本文利用
 
+## Introduction
+
+1.写明背景及大的研究领域———量子机器学习
+
+
+Machine learning has been developed for more than half a century, and with the improvement of computational ability, it has become a very important part of computer science.However,the increment of data is much greater than the growth of the computers' performance. Therefore, the lack of computing power becomes deficiency gradually in the field of machine learning, which relies on big data in many cases[1].And Quantum computation is a computational paradigm based on the laws of quantum mechanics. By carefully exploiting quantum effects such as interference or (potentially) entanglement, quantum computers can efficiently solve selected problems [2–4] that are believed to be hard for classical machines.So people consider the possibilities of the combination of quantum computing and machine learning.The concept of quantum machine learning(QML) gradually took shape. With the high parallelism of quantum computing, quantum machine learning achieves the purpose of further optimizing traditional machine learning.
+
+>机器学习已经发展了半个多世纪，随着计算能力的提高，它已成为计算机科学中非常重要的一部分。然而，数据的增量远远大于计算机性能的增长。因此，计算能力的缺乏在机器学习领域逐渐成为不足，机器学习在许多情况下依赖于大数据。而量子计算是一种基于量子力学定律的计算范式。通过仔细利用干涉或（潜在）纠缠等量子效应，量子计算机可以有效地解决选定的问题，这些问题被认为对经典机器来说很难。因此人们考虑量子计算和机器学习相结合的可能性。量子机器学习这一概念逐渐形成了。量子机器学习借助量子计算的高并行性，实现了进一步优化传统机器学习的目的。
+
+2.点出本文要研究的小研究领域——量子神经网络及其研究历程
+
+Huang Yiming et al. conducted research on quantum machine learning and proposed that quantum machine learning is divided into four aspects, namely quantum unsupervised clustering algorithm, quantum supervised classification algorithm, quantum dimensionality reduction algorithm, and quantum classification learning. [5] In this work, we focus on quantum neural networks(QNN) in quantum supervised classification algorithms. Related studies point out that the information processing process of human brain is related to quantum effects, and the dynamic characteristics of biological neural network are similar to those of quantum system, so the combination  of quantum theory and biological neural network is generated.[6]For the first time the concept of quantum neural computing has been given by Kak [7] in the year 1995.For the first time, a detail description as well as systematic examination of quantum neural network has been investigated in the Ph.D. thesis of Menneer [8] in 1998. In 2000, Ventura and Martinez [9] proposed a quantum implementation of the associative memory model.In 2003, Qubit neural network has been introduced by Kouda et al. [10].In 2006, Zhou et al. proposed a quantum neural network that can operate for only a single neurons, to solve the linear unseparable problem [11], which requires two layers to solve the traditional neural network.In 2008, Silva et al made a series of different implementation neural network models [5962,100101], and also presented an analytical comparison of different types of quantum neural network models in 2013 [12]
+
+>黄一鸣等人对量子机器学习进行了研究，提出量子机器学习分为四个方面,分别是量子无监督聚类算法、量子有监督分类算法、量子降维算法、量子分类学习。[5]在这项工作中，我们关注于量子有监督分类算法中的量子神经网络。相关研究指出，人脑的信息处理过程与量子效应有关，生物神经网络的动态特性与量子系统相似，因此产生了量子理论和生物神经网络相结合的研究。Kak在 1995 年首次提出了量子神经计算的概念。19988年，Menneer[1998]的博士论文首次对量子神经网络进行了详细描述和系统检查。2000年，文图拉和马丁内斯[9]提出了联想记忆模型的量子实现。2003年，Kouda等人[14]引入了Qubit神经网络。2006年，Zhou等人提出了一种只能对单个神经元运行的量子神经网络，以解决需要两层来解决传统神经网络的线性不可分问题[11]。2008年，Silva等人制作了一系列不同的实现神经网络模型[5962，100101]，并在2013年提出了不同类型的量子神经网络模型的分析比较。[12]
+
+3.指出量子神经网络相较于经典神经网络的优势
+
+In 2021, Abbas and his colleagues published an article in the journal Nature Computational Science [13] in which they demonstrated that quantum neural networks – neural networks running on quantum computers – have a higher capacity (i.e. can describe more functions) than classical (i.e., traditional) neural networks. Quantum neural networks are capable of achieving higher effective dimensions than classical neural networks, and we are able to demonstrate these results on today's hardware. In addition, quantum neural networks in these efficient dimensions are trained to reduce loss values in fewer iterations, which means they also fit the data well. They even observed that quantum neural networks train faster than classical neural networks.
+
+>在2021年，阿巴斯和他的同事在《自然计算科学》杂志上发表了一篇文章[13]，他们证明量子神经网络——在量子计算机上运行的神经网络——比经典(即传统)神经网络具有更高的容量(即可以描述更多的功能)。量子神经网络能够实现比经典神经网络更高的有效维度，我们能够在今天的硬件上展示这些结果。此外，这些高效维度的量子神经网络经过训练，可以在更少的迭代中降低损失值，这意味着它们也可以很好地拟合数据。他们甚至观察到量子神经网络的训练速度比经典神经网络快。
+
+4.指出本文的研究目标——通过做实验验证量子神经网络的优越性
+
+Here, we present an experimental implementation of a quantum neural network. More generally, we apply the algorithm to a popular problem on a classical computer, the iris classification problem. Through this experimental demonstration, we hope to demonstrate the performance superiority of quantum neural networks over classical neural networks. Make some practical attempts for the application of quantum neural networks.
+
+>在这里，我们给出了了一个量子神经网络的实验实现。更全面的说，我们将该算法应用于一个经典计算机上的流行问题，鸢尾花(iris)分类问题。我们希望通过这一实验演示，展示量子神经网络相较于经典神经网络的性能上的优越性。为量子神经网络的应用做出一些实践上的尝试。
+
+5.承上启下，点明后面的文章结构（未写）
+
+
+
+## References
+
+
+[1]Yao Zhang, Qiang Ni, Recent advances in quantum machine learning, Quantum Engineering, 10.1002/que2.34, 2, 1, (2020).
+
+[2]Shor PW. 1997 Polynomial-time algorithms for prime factorization and discrete logarithms on a quantum computer. SIAM J. Comput. 26, 1484–1509. (doi:10.1137/S0097539795293172) Crossref, ISI, Google Scholar
+
+[3]Van Dam W, Hallgren S, Ip L. 2006 Quantum algorithms for some hidden shift problems. SIAM J. Comput. 36, 763–778. (doi:10.1137/S009753970343141X) Crossref, ISI, Google Scholar
+
+[4]Hallgren S. 2007 Polynomial-time quantum algorithms for Pell’s equation and the principal ideal problem. J. ACM 54, 4. (doi:10.1145/1206035.1206039) Crossref, ISI, Google Scholar
+
+[5]黄一鸣, 雷航, 李晓瑜. 量子机器学习算法综述[J]. 计算机学报, 2018, 41(1): 145-163.
+
+[6]Peruš M. Neuro-quantum parallelism in brain-mind and computers[J]. Informatica, 1996, 20: 173-183.
+
+[7]Kak S (1995) On quantum neural computing. Inf Sci 83:143–163
+
+[8]Menneer T (1998) Quantum artificial neural networks. PhD thesis, University of Exeter
+
+[9]Ventura D, Martinez T (2000) Quantum associative memory. Inf Sci 124(1–4):273–296
+
+[10]Kouda N, Matsui N, Nishimura H, Peper F (2003) Qubit neural network and its efficiency. In: International 
+conference on knowledge-based and intelligent information and engineering systems, pp 304–310
+
+[11]Zhou R, Zheng HY, Jiang N, Ding Q (2006) Self-organizing quantum neural network. In: Neural networks, 2006. IJCNN’06. International joint conference on IEEE, pp 1067–1072
+
+[12]de Paula Neto F M, da Silva A J, Ludermir T B, et al. Analysis of quantum neural models[C]//Proceedings of the Congresso Brasileiro de Inteligência Computacional—CBIC. 2013.
+
+[13]Abbas A, Sutter D, Zoufal C, et al. The power of quantum neural networks[J]. Nature Computational Science, 2021, 1(6): 403-409.
+
+
 ## Introduction 汇报
 
 Graph neural network initialisation of quantum approximate optimisation
