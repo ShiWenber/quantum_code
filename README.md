@@ -296,7 +296,7 @@ Here, we present an experimental implementation of a quantum neural network. Mor
 
 6.承上启下，点明后面的文章结构（未写）
 
-![introduction](README.assets/QQ截图2023060585204.png
+![introduction](README.assets/QQ截图20230605085204.png
  "introduction")
 
 
