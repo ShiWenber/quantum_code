@@ -276,19 +276,25 @@ Huang Yiming et al. conducted research on quantum machine learning and proposed 
 
 >黄一鸣等人对量子机器学习进行了研究，提出量子机器学习分为四个方面,分别是量子无监督聚类算法、量子有监督分类算法、量子降维算法、量子分类学习。[5]在这项工作中，我们关注于量子有监督分类算法中的量子神经网络。相关研究指出，人脑的信息处理过程与量子效应有关，生物神经网络的动态特性与量子系统相似，因此产生了量子理论和生物神经网络相结合的研究。Kak在 1995 年首次提出了量子神经计算的概念。19988年，Menneer[1998]的博士论文首次对量子神经网络进行了详细描述和系统检查。2000年，文图拉和马丁内斯[9]提出了联想记忆模型的量子实现。2003年，Kouda等人[14]引入了Qubit神经网络。2006年，Zhou等人提出了一种只能对单个神经元运行的量子神经网络，以解决需要两层来解决传统神经网络的线性不可分问题[11]。2008年，Silva等人制作了一系列不同的实现神经网络模型[5962，100101]，并在2013年提出了不同类型的量子神经网络模型的分析比较。[12]
 
-3.指出量子神经网络相较于经典神经网络的优势
+3.指出经典神经网络目前的不足之处
 
-In 2021, Abbas and his colleagues published an article in the journal Nature Computational Science [13] in which they demonstrated that quantum neural networks – neural networks running on quantum computers – have a higher capacity (i.e. can describe more functions) than classical (i.e., traditional) neural networks. Quantum neural networks are capable of achieving higher effective dimensions than classical neural networks, and we are able to demonstrate these results on today's hardware. In addition, quantum neural networks in these efficient dimensions are trained to reduce loss values in fewer iterations, which means they also fit the data well. They even observed that quantum neural networks train faster than classical neural networks.
+Classical neural networks have been developed for eighty years, various theories have gradually matured, and algorithms have become more and more abundant. However, from the perspective of data capacity and processing speed, most simple classical neural networks are simplified forms of biological networks, and the effect of classical neural networks in dealing with massive data and processing complex tasks is limited by their easy overfitting and slow parameter training speed [13]. Quantum neural networks can solve these problems well, which is why this article focuses on quantum neural networks.
 
->在2021年，阿巴斯和他的同事在《自然计算科学》杂志上发表了一篇文章[13]，他们证明量子神经网络——在量子计算机上运行的神经网络——比经典(即传统)神经网络具有更高的容量(即可以描述更多的功能)。量子神经网络能够实现比经典神经网络更高的有效维度，我们能够在今天的硬件上展示这些结果。此外，这些高效维度的量子神经网络经过训练，可以在更少的迭代中降低损失值，这意味着它们也可以很好地拟合数据。他们甚至观察到量子神经网络的训练速度比经典神经网络快。
+>经典神经网络已经发展了八十年，各种理论逐渐成熟，算法也越来越丰富。但从数据容量和处理速度来看，目前大多数简单经典神经网络是生物网络的简化形式，在应对海量数据和处理复杂任务时经典神经网络的效果因为其容易过拟合且参数训练速度慢而受限[13]。而量子神经网络能很好的解决这些问题，这就是为什么本文关注于量子神经网络。
 
-4.指出本文的研究目标——通过做实验验证量子神经网络的优越性
+4.点明量子神经网络相较于经典神经网络的优势
+
+In 2021, Abbas and his colleagues published an article in the journal Nature Computational Science [14] in which they demonstrated that quantum neural networks – neural networks running on quantum computers – have a higher capacity (i.e. can describe more functions) than classical (i.e., traditional) neural networks. Quantum neural networks are capable of achieving higher effective dimensions than classical neural networks, and we are able to demonstrate these results on today's hardware. In addition, quantum neural networks in these efficient dimensions are trained to reduce loss values in fewer iterations, which means they also fit the data well. They even observed that quantum neural networks train faster than classical neural networks.
+
+>在2021年，阿巴斯和他的同事在《自然计算科学》杂志上发表了一篇文章[14]，他们证明量子神经网络——在量子计算机上运行的神经网络——比经典(即传统)神经网络具有更高的容量(即可以描述更多的功能)。量子神经网络能够实现比经典神经网络更高的有效维度，我们能够在今天的硬件上展示这些结果。此外，这些高效维度的量子神经网络经过训练，可以在更少的迭代中降低损失值，这意味着它们也可以很好地拟合数据。他们甚至观察到量子神经网络的训练速度比经典神经网络快。
+
+5.指出本文的研究目标——通过做实验验证量子神经网络的优越性
 
 Here, we present an experimental implementation of a quantum neural network. More generally, we apply the algorithm to a popular problem on a classical computer, the iris classification problem. Through this experimental demonstration, we hope to demonstrate the performance superiority of quantum neural networks over classical neural networks. Make some practical attempts for the application of quantum neural networks.
 
 >在这里，我们给出了了一个量子神经网络的实验实现。更全面的说，我们将该算法应用于一个经典计算机上的流行问题，鸢尾花(iris)分类问题。我们希望通过这一实验演示，展示量子神经网络相较于经典神经网络的性能上的优越性。为量子神经网络的应用做出一些实践上的尝试。
 
-5.承上启下，点明后面的文章结构（未写）
+6.承上启下，点明后面的文章结构（未写）
 
 ![introduction](README.assets/QQ截图20230528152116.png
  "introduction")
@@ -322,7 +328,9 @@ conference on knowledge-based and intelligent information and engineering system
 
 [12]de Paula Neto F M, da Silva A J, Ludermir T B, et al. Analysis of quantum neural models[C]//Proceedings of the Congresso Brasileiro de Inteligência Computacional—CBIC. 2013.
 
-[13]Abbas A, Sutter D, Zoufal C, et al. The power of quantum neural networks[J]. Nature Computational Science, 2021, 1(6): 403-409.
+[13]焦李成, 杨淑媛, 刘芳, 等. 神经网络七十年: 回顾与展望[J]. 计算机学报, 2016, 39(8): 1697-1716.
+
+[14]Abbas A, Sutter D, Zoufal C, et al. The power of quantum neural networks[J]. Nature Computational Science, 2021, 1(6): 403-409.
 
 
 ## Introduction 汇报
