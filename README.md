@@ -132,6 +132,133 @@ $$
 $$
 $\lvert0\rangle$、$\lvert1\rangle$各以相等的几率出现，所以$\lvert\psi\rangle$既包含$\lvert0\rangle$的信息，也包含$\lvert1\rangle$的信息。
 
+#### 量子计算
+
+$$
+\lvert 1 \rangle = \begin{bmatrix}
+   0\\
+   1 
+\end{bmatrix}
+$$
+
+$$
+\lvert 0 \rangle = \begin{bmatrix}
+   1\\
+   0
+\end{bmatrix}
+$$
+
+**inner product**
+
+$\lvert \psi \rangle$ - ket-Vector 正常列向量
+
+$\langle \psi \lvert$ - bra-Vector 表示共轭转置态矢量，一定是复数取反的行向量
+
+$\langle \varphi \lvert \psi \rangle = \int_{-\infty}^{\infty} \bar{\varphi}(x) \psi(x) d x$ if $\varphi$ and $\psi$ are functions
+
+$\langle\boldsymbol{\varphi} \mid \boldsymbol{\psi}\rangle=\varphi^{\dagger} \boldsymbol{\psi}=\bar{\varphi}^T \boldsymbol{\psi} \quad \text { (if } \boldsymbol{\varphi} \text { and } \boldsymbol{\psi} \text { are column vectors) }$
+
+共轭转置符号$a^\dagger$等价于$\bar{a}^T$
+
+对于一个复数向量，它的共轭是将向量中每个元素取复共轭得到的新向量。
+
+$[0, i]^* = [0, -i]$
+
+$[0,1]^* = [0,1]$
+
+$$
+\langle 0 \lvert 1 \rangle = \delta_{01} = \begin{bmatrix}
+   0\\
+   1
+\end{bmatrix}
+\begin{bmatrix}
+   1 & 0
+\end{bmatrix}
+= 0
+$$
+
+$$
+\langle 0 \lvert 0 \rangle = \delta_{00}
+= \begin{bmatrix}
+   1\\
+   0
+\end{bmatrix}
+\begin{bmatrix}
+   1 & 0
+\end{bmatrix}
+=\begin{bmatrix}
+   1 \\
+   0
+\end{bmatrix}
+= \lvert 0 \rangle
+$$
+
+内积的物理含义
+
+$$
+\lvert \langle \varphi \lvert \psi \rangle \rvert^2
+$$
+
+上式表示在给定 $\lvert \psi \rangle$ 为初始状态，从中观察到 $\varphi$ 的概率(后面是被观察的叠加态，前面是观察的目标状态)
+
+**tensor product**
+
+$$
+\lvert 0 \rangle \otimes \lvert 1 \rangle = \begin{bmatrix}
+   1 \\
+   0
+\end{bmatrix}
+\otimes
+\begin{bmatrix}
+   0\\
+   1
+\end{bmatrix}
+=\begin{bmatrix}
+   1
+   \begin{bmatrix}
+      0\\   
+      1
+   \end{bmatrix}
+   \\
+   0
+   \begin{bmatrix}
+      0\\
+      1
+   \end{bmatrix}
+\end{bmatrix}
+= \begin{bmatrix}
+   0\\
+   1\\
+   0\\
+   0
+\end{bmatrix}
+$$
+
+表达方式
+
+$$
+\lvert \psi \rangle \otimes \lvert \varphi \rangle \equiv \lvert \psi \rangle \lvert \varphi \rangle \equiv  \lvert \psi, \varphi \rangle \equiv  \lvert \psi \varphi \rangle
+$$
+
+**inner product on the tensor products**
+
+$$
+\langle \psi_1 \psi_2 \lvert \varphi_1 \varphi_2 \rangle = \langle \psi_1 \lvert \varphi_1 \rangle \langle \psi_2 \lvert \varphi_2 \rangle
+$$
+
+**outer product**
+
+$$
+\lvert \psi \rangle \langle \varphi \rvert \equiv \lvert \psi \rangle \otimes \langle \varphi \rvert
+$$
+
+**投影算符**
+
+$$
+\hat{P_0} \equiv \lvert 0 \rangle \langle 0 \rvert
+$$
+
+
 ##### 一个物理系统能够实现（充当）一个量子位的条件
 
 1. 存在经典上互相排斥（互相正交）的两个态，分别编码为$\boldsymbol{ \vert 0\rangle}$（0态）、$\boldsymbol{ \vert 1\rangle}$（1态）
@@ -144,12 +271,6 @@ $\lvert0\rangle$、$\lvert1\rangle$各以相等的几率出现，所以$\lvert\p
 我们假设有10个比特（即10位），那么从00 0000 0000到11 1111 1111之中，0和1的排列方式会有$2^{10}$（1024）种，但比特每次只能表示其中的一种排列（信息）。**因为量子比特可以同时表示0和1，所以10量子比特通过叠加可以同时表示1024种排列**。在叠加态下进行计算，就可以同时计算全部1024种排列。例如，用量子比特表示的1～1024乘某个数时，计算次数不是1024次，而是1次就能完成。
 
 **量子计算机的计算效率会随着量子比特数量的增加而呈指数增长**。例如，有10个量子比特，可以同时计算$2^{10}$（1024）种排列；如果有30个量子比特，则可以同时计算$2^{30}$（1073741824）种排列。**量子比特的数量是X，那么一次就可以同时计算$\boldsymbol {2^X}$种排列。**
-
-
-### 量子编码
-
-
-#### 为什么用少量量子比特就能编码较大量的数据？
 
 ### 量子门电路
 
