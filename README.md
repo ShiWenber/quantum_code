@@ -296,7 +296,7 @@ H=$\frac{1}{\sqrt 2} \begin{pmatrix} 1&1\\
 这也是一种单 qubit 门。  
 
 - 控制非(Controlled-NOT, CNOT)门：  
-  ![控制非(Controlled-NOT, CNOT)门](README.assets/%E6%8E%A7%E5%88%B6%E9%9D%9E(Controlled-NOT%2C%20CNOT)%E9%97%A8.jpg "控制非(Controlled-NOT, CNOT)门")    
+  ![控制非(Controlled-NOT, CNOT)门](README.assets/cnot.jpg)    
   这是一个双 qubit 门，若控制位（图中带黑点的线路）为1，则翻转受控制位（图中带十字圆圈的线路），否则不执行操作；而控制位自身始终不动。
 
 - 控制U\<br>门：
@@ -410,9 +410,6 @@ Here, we present an experimental implementation of a quantum neural network. Mor
 >在这里，我们给出了了一个量子神经网络的实验实现。更全面的说，我们将该算法应用于一个经典计算机上的流行问题，鸢尾花(iris)分类问题。我们希望通过这一实验演示，展示量子神经网络相较于经典神经网络的性能上的优越性。为量子神经网络的应用做出一些实践上的尝试。
 
 5.承上启下，点明后面的文章结构（未写）
-
-![introduction](README.assets/QQ截图20230528152116.png
- "introduction")
 
 
 ## References
