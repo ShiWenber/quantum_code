@@ -1,0 +1,58 @@
+    H    Q1
+    H    Q8
+    H    Q14
+    H    Q21
+   RZ    Q1 {alpha0}
+   RZ    Q8 {alpha1}
+   RZ    Q14 {alpha2}
+   RZ    Q21 {alpha3}
+
+  Y2M    Q8
+   CZ    Q1           Q8
+  Y2P    Q8
+
+   RZ    Q8 {alpha4}
+
+  Y2M    Q8
+   CZ    Q1           Q8
+  Y2P    Q8
+
+  Y2M    Q14
+   CZ    Q8           Q14
+  Y2P    Q14
+   RZ    Q14 {alpha5}
+  Y2M    Q14
+   CZ    Q8           Q14
+  Y2P    Q14
+
+  Y2M    Q21
+   CZ    Q14           Q21
+  Y2P    Q21
+   RZ    Q21 {alpha6}
+  Y2M    Q21
+   CZ    Q14           Q21
+  Y2P    Q21
+
+   RY    Q1 {theta0}
+   RY    Q1 {theta1}
+   RY    Q1 {theta2}
+   RY    Q1 {theta3}
+
+   Y2M   Q8
+   CZ    Q1          Q8
+   Y2P   Q8
+
+   Y2M   Q14
+   CZ    Q8          Q14
+   Y2P   Q14
+
+   Y2M   Q21
+   CZ    Q14          Q21
+   Y2P   Q21
+
+   RY    Q1 {theta4}
+   RY    Q1 {theta5}
+   RY    Q1 {theta6}
+   RY    Q1 {theta7}
+   Z Q14
+   M Q14 
