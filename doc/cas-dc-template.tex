@@ -1,0 +1,87 @@
+\documentclass[a4paper,fleqn]{cas-dc}
+
+\usepackage[numbers]{natbib}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{comment}
+\usepackage{booktabs}
+\usepackage{float} 
+\usepackage{amsfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{bbm}
+\usepackage{bbding}
+\usepackage{bm}
+\usepackage{dsfont}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{soul}
+\usepackage{url}
+\usepackage{stfloats}
+\usepackage[utf8]{inputenc}
+\usepackage[small]{caption}
+\usepackage{verbatim}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}  % Use Input in the format of Algorithm  
+\renewcommand{\algorithmicensure}{\textbf{Output:}} % Use Output in the format of Algorithm  
+
+\begin{document}
+
+\begin{twocolumn}
+
+% Main text
+\section{Introduction}
+Machine learning has been developed for more than half a century, and with the improvement of computational ability, it has become a very important part of computer science.However,the increment of data is much greater than the growth of the computers' performance. Therefore, the lack of computing power becomes deficiency gradually in the field of machine learning, which relies on big data in many cases.[1]And Quantum computation is a computational paradigm based on the laws of quantum mechanics. By carefully exploiting quantum effects such as interference or (potentially) entanglement, quantum computers can efficiently solve selected problems [2–4] that are believed to be hard for classical machines.So people consider the possibilities of the combination of quantum computing and machine learning.The concept of quantum machine learning(QML) gradually took shape. With the high parallelism of quantum computing, quantum machine learning achieves the purpose of further optimizing traditional machine learning.
+
+Huang Yiming et al. conducted research on quantum machine learning and proposed that quantum machine learning is divided into four aspects, namely quantum unsupervised clustering algorithm, quantum supervised classification algorithm, quantum dimensionality reduction algorithm, and quantum classification learning. [5] In this work, we focus on quantum neural networks(QNN) in quantum supervised classification algorithms. Related studies point out that the information processing process of human brain is related to quantum effects, and the dynamic characteristics of biological neural network are similar to those of quantum system, so the combination  of quantum theory and biological neural network is generated.[6]For the first time the concept of quantum neural computing has been given by Kak [7] in the year 1995.For the first time, a detail description as well as systematic examination of quantum neural network has been investigated in the Ph.D. thesis of Menneer [8] in 1998. In 2000, Ventura and Martinez [9] proposed a quantum implementation of the associative memory model.In 2003, Qubit neural network has been introduced by Kouda et al. [10].In 2006, Zhou et al. proposed a quantum neural network that can operate for only a single neurons, to solve the linear unseparable problem [11], which requires two layers to solve the traditional neural network.In 2008, Silva et al made a series of different implementation neural network models [5962,100101], and also presented an analytical comparison of different types of quantum neural network models in 2013. [12]
+
+In 2021, Abbas and his colleagues published an article in the journal Nature Computational Science [13] in which they demonstrated that quantum neural networks – neural networks running on quantum computers – have a higher capacity (i.e. can describe more functions) than classical (i.e., traditional) neural networks. Quantum neural networks are capable of achieving higher effective dimensions than classical neural networks, and we are able to demonstrate these results on today's hardware. In addition, quantum neural networks in these efficient dimensions are trained to reduce loss values in fewer iterations, which means they also fit the data well. They even observed that quantum neural networks train faster than classical neural networks.
+
+Here, we present an experimental implementation of a quantum neural network. More generally, we apply the algorithm to a popular problem on a classical computer, the iris classification problem. Through this experimental demonstration, we hope to demonstrate the performance superiority of quantum neural networks over classical neural networks. Make some practical attempts for the application of quantum neural networks.
+
+% To print the credit authorship contribution details
+\printcredits
+
+%\citation{author: year}
+%
+%%% Loading bibliography style file
+%%\bibliographystyle{model1b-num-names}
+%%\bibliographystyle{elsarticle-num} 
+%\bibliographystyle{cas-model2-names}
+%
+%% Loading bibliography database
+%\bibliography{cas-refs}
+%[1]Yao Zhang, Qiang Ni, Recent advances in quantum machine learning, Quantum Engineering, 10.1002/que2.34, 2, 1, (2020).
+%
+%[2]Shor PW. 1997 Polynomial-time algorithms for prime factorization and discrete logarithms on a quantum computer. SIAM J. Comput. 26, 1484–1509. Crossref, ISI, Google Scholar
+%
+%[3]Van Dam W, Hallgren S, Ip L. 2006 Quantum algorithms for some hidden shift problems. SIAM J. Comput. 36, 763–778. (doi:10.1137/S009753970343141X) Crossref, ISI, Google Scholar
+%
+%[4]Hallgren S. 2007 Polynomial-time quantum algorithms for Pell’s equation and the principal ideal problem. J. ACM 54, 4. (doi:10.1145/1206035.1206039) Crossref, ISI, Google Scholar
+%
+%[5]黄一鸣, 雷航, 李晓瑜. 量子机器学习算法综述[J]. 计算机学报, 2018, 41(1): 145-163.
+%
+%[6]Peruš M. Neuro-quantum parallelism in brain-mind and computers[J]. Informatica, 1996, 20: 173-183.
+%
+%[7]Kak S (1995) On quantum neural computing. Inf Sci 83:143–163
+%
+%[8]Menneer T (1998) Quantum artificial neural networks. PhD thesis, University of Exeter
+%
+%[9]Ventura D, Martinez T (2000) Quantum associative memory. Inf Sci 124(1–4):273–296
+%
+%[10]Kouda N, Matsui N, Nishimura H, Peper F (2003) Qubit neural network and its efficiency. In: International conference on knowledge-based and intelligent information and engineering systems, pp 304–310
+%
+%[11]Zhou R, Zheng HY, Jiang N, Ding Q (2006) Self-organizing quantum neural network. In: Neural networks, 2006. IJCNN’06. International joint conference on IEEE, pp 1067–1072
+%
+%[12]de Paula Neto F M, da Silva A J, Ludermir T B, et al. Analysis of quantum neural models[C]//Proceedings of the Congresso Brasileiro de Inteligência Computacional—CBIC. 2013.
+%
+%[13]Abbas A, Sutter D, Zoufal C, et al. The power of quantum neural networks[J]. Nature Computational Science, 2021, 1(6): 403-409.
+\end{twocolumn}
+\end{document}
