@@ -98,6 +98,7 @@ Experimental Realization of a Quantum Support Vector Machine
 ### 量子态
 
 量子态是描述量子系统的状态，不同于经典物理态，它满足和经典物理态本质上不同的量子态叠加原理。即如果一个量子力学系统态可能是$\lvert \psi_1 \rangle$,也可能是$\lvert \psi_2\rangle$，在保持态$\lvert \psi\rangle$不被破坏的情况下，没有任何物理方法能确定$\lvert \psi\rangle$处于那种状态，即这时系统处于两个态的叠加态。
+
 $$
 \lvert \psi \rangle=\alpha \lvert \psi_1 \rangle+\beta\lvert \psi_2\rangle
 $$
